@@ -23,7 +23,7 @@ class StartViewController: UIViewController {
         super.viewDidLoad()
         configure()
     }
-    
+        
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let searchingViewController = segue.destination as? SearchingViewController {
             if segue.identifier == String.Main.Segue.searchAgreements {
@@ -40,6 +40,7 @@ class StartViewController: UIViewController {
     private func configure() {
         agreementsSearchButton.addTarget(self, action: #selector(showAgreementsSearching), for: .touchUpInside)
         usersSearchButton.addTarget(self, action: #selector(showUsersSearching), for: .touchUpInside)
+        
     }
     
     @objc

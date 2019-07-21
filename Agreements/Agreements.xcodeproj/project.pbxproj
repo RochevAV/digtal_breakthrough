@@ -26,6 +26,13 @@
 		D276551B22E3E2E200CECC0C /* UIViewController+Storyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = D276551A22E3E2E200CECC0C /* UIViewController+Storyboard.swift */; };
 		D276551E22E4112A00CECC0C /* AgreementTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D276551D22E4112A00CECC0C /* AgreementTableViewCell.swift */; };
 		D276552022E411FE00CECC0C /* ColoredIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D276551F22E411FE00CECC0C /* ColoredIndicator.swift */; };
+		D276552222E4312000CECC0C /* SearchDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D276552122E4312000CECC0C /* SearchDetailViewController.swift */; };
+		D276552422E431AB00CECC0C /* TextViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D276552322E431AB00CECC0C /* TextViewCell.swift */; };
+		D276552622E4377B00CECC0C /* Agreement.swift in Sources */ = {isa = PBXBuildFile; fileRef = D276552522E4377B00CECC0C /* Agreement.swift */; };
+		D276552822E4453500CECC0C /* AgreementsDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = D276552722E4453500CECC0C /* AgreementsDataSource.swift */; };
+		D276552A22E4474300CECC0C /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = D276552922E4474300CECC0C /* User.swift */; };
+		D276552C22E4477900CECC0C /* UsersDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = D276552B22E4477900CECC0C /* UsersDataSource.swift */; };
+		D276552E22E44ADB00CECC0C /* UserDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D276552D22E44ADB00CECC0C /* UserDetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -55,6 +62,13 @@
 		D276551A22E3E2E200CECC0C /* UIViewController+Storyboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Storyboard.swift"; sourceTree = "<group>"; };
 		D276551D22E4112A00CECC0C /* AgreementTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AgreementTableViewCell.swift; sourceTree = "<group>"; };
 		D276551F22E411FE00CECC0C /* ColoredIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColoredIndicator.swift; sourceTree = "<group>"; };
+		D276552122E4312000CECC0C /* SearchDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchDetailViewController.swift; sourceTree = "<group>"; };
+		D276552322E431AB00CECC0C /* TextViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextViewCell.swift; sourceTree = "<group>"; };
+		D276552522E4377B00CECC0C /* Agreement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Agreement.swift; sourceTree = "<group>"; };
+		D276552722E4453500CECC0C /* AgreementsDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AgreementsDataSource.swift; sourceTree = "<group>"; };
+		D276552922E4474300CECC0C /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		D276552B22E4477900CECC0C /* UsersDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersDataSource.swift; sourceTree = "<group>"; };
+		D276552D22E44ADB00CECC0C /* UserDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -191,6 +205,8 @@
 				D276551C22E4110700CECC0C /* View */,
 				D276551722E3C5D700CECC0C /* DataSource */,
 				D276551522E3C22F00CECC0C /* SearchingViewController.swift */,
+				D276552D22E44ADB00CECC0C /* UserDetailViewController.swift */,
+				D276552122E4312000CECC0C /* SearchDetailViewController.swift */,
 			);
 			path = Searching;
 			sourceTree = "<group>";
@@ -214,6 +230,10 @@
 		D276551722E3C5D700CECC0C /* DataSource */ = {
 			isa = PBXGroup;
 			children = (
+				D276552522E4377B00CECC0C /* Agreement.swift */,
+				D276552722E4453500CECC0C /* AgreementsDataSource.swift */,
+				D276552922E4474300CECC0C /* User.swift */,
+				D276552B22E4477900CECC0C /* UsersDataSource.swift */,
 			);
 			path = DataSource;
 			sourceTree = "<group>";
@@ -222,6 +242,7 @@
 			isa = PBXGroup;
 			children = (
 				D276551D22E4112A00CECC0C /* AgreementTableViewCell.swift */,
+				D276552322E431AB00CECC0C /* TextViewCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -344,9 +365,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D276552222E4312000CECC0C /* SearchDetailViewController.swift in Sources */,
 				D201103122E3747200BDF3D3 /* StartViewController.swift in Sources */,
+				D276552622E4377B00CECC0C /* Agreement.swift in Sources */,
+				D276552822E4453500CECC0C /* AgreementsDataSource.swift in Sources */,
 				D2423F8422E3A0B8009D0753 /* ImageButton.swift in Sources */,
 				D276551E22E4112A00CECC0C /* AgreementTableViewCell.swift in Sources */,
+				D276552E22E44ADB00CECC0C /* UserDetailViewController.swift in Sources */,
 				D2423F8722E3ABF5009D0753 /* UIColor+Main.swift in Sources */,
 				D276551622E3C22F00CECC0C /* SearchingViewController.swift in Sources */,
 				D276550D22E3BC1100CECC0C /* String+Main.swift in Sources */,
@@ -355,8 +380,11 @@
 				D276551922E3DC4500CECC0C /* UIStoryboard.swift in Sources */,
 				D2423F8922E3AF8E009D0753 /* UIColor+Methods.swift in Sources */,
 				D276550A22E3B61500CECC0C /* ModuleTransitionable.swift in Sources */,
+				D276552A22E4474300CECC0C /* User.swift in Sources */,
+				D276552422E431AB00CECC0C /* TextViewCell.swift in Sources */,
 				D276552022E411FE00CECC0C /* ColoredIndicator.swift in Sources */,
 				D2423F9022E3B226009D0753 /* MainRouter.swift in Sources */,
+				D276552C22E4477900CECC0C /* UsersDataSource.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

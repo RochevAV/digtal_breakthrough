@@ -10,7 +10,7 @@ import UIKit
 
 @IBDesignable
 class ImageButton: UIControl  {
-
+    
     //MARK: - Public Properties
     
     @IBInspectable
@@ -37,7 +37,7 @@ class ImageButton: UIControl  {
         super.init(frame: frame)
         configure()
     }
-
+    
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         configure()
@@ -47,7 +47,7 @@ class ImageButton: UIControl  {
     
     private func configure() {
         layer.cornerRadius = 20
-        let labelHeight = bounds.height/4.0
+        let labelHeight = bounds.height / 4.0
         let labelFrame = CGRect(x: 0, y: bounds.height - labelHeight, width: bounds.width, height: labelHeight)
         let label = UILabel(frame: labelFrame)
         label.textAlignment = .center

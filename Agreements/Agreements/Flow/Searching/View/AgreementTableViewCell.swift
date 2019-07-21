@@ -8,17 +8,11 @@
 
 import UIKit
 
-struct AgreementCell {
-    let description: String
-    let subtext: String
-    let status: ColoredIndicator.Status
-}
-
 class AgreementTableViewCell: UITableViewCell {
 
     // MARK: - Public Properties
     
-    var model: AgreementCell? {
+    var agreement: Agreement? {
         didSet {
             configure()
         }
@@ -32,18 +26,21 @@ class AgreementTableViewCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        configure()
     }
 
     // MARK: - Private Methods
     
     private func configure() {
-        guard let model = model else {
+        guard let agreement = agreement,
+            let descriptionLabel = descriptionLabel,
+        let subtextLabel = subtextLabel,
+        let indicator = indicator else {
             return
         }
-        descriptionLabel.text = model.description
-//        subtextLabel.text = model.subtext
-//        indicator.status = model.status
+        descriptionLabel.text = agreement.description
+        descriptionLabel.sizeToFit()
+        subtextLabel.text = agreement.subtext
+        indicator.status = agreement.status
     }
 
 }

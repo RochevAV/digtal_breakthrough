@@ -48,6 +48,14 @@ extension String.Main.Segue {
     static var searchUsers: String {
         return "showUsersSegue"
     }
+    
+    static var detailAgreements: String {
+        return "searchDetailAgreementSegue"
+    }
+    
+    static var detailUser: String {
+        return "searchDetailUserSegue"
+    }
 
 }
 
@@ -63,5 +71,9 @@ extension String.Main.Cell {
     
     static var agreementCell: String {
         return "AgreementTableViewCell"
+    }
+    
+    static var textViewCell: String {
+        return "TextViewCell"
     }
 }
