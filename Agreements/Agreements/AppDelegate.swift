@@ -13,10 +13,24 @@ import Firebase
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-
+    let isAuthorized: Bool = false
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         FirebaseApp.configure()
+        
+        window = UIWindow(frame: UIScreen.main.bounds)
+        let mainRouter = MainRouter()
+        window?.rootViewController = mainRouter
+        window?.makeKeyAndVisible()
+
+        // FIXME: Create AuthService for MainRouter
+        if isAuthorized {
+            mainRouter.showStartFlow()
+        }
+        else {
+            mainRouter.showAuthFlow()
+        }
+        
         return true
     }
 
