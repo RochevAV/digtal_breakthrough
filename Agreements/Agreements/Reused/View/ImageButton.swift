@@ -49,7 +49,7 @@ class ImageButton: UIControl  {
         layer.cornerRadius = 20
         let label = UILabel()
         label.textAlignment = .center
-        label.font = UIFont.boldSystemFont(ofSize: 30)
+        label.font = UIFont.boldSystemFont(ofSize: 25)
         label.textColor = UIColor.Main.blueBackround
         label.translatesAutoresizingMaskIntoConstraints = false
         addSubview(label)

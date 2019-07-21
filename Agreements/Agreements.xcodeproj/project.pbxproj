@@ -33,6 +33,7 @@
 		D276552A22E4474300CECC0C /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = D276552922E4474300CECC0C /* User.swift */; };
 		D276552C22E4477900CECC0C /* UsersDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = D276552B22E4477900CECC0C /* UsersDataSource.swift */; };
 		D276552E22E44ADB00CECC0C /* UserDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D276552D22E44ADB00CECC0C /* UserDetailViewController.swift */; };
+		D296AB7222E47621009FA665 /* NavigationTitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D296AB7122E47621009FA665 /* NavigationTitleView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -69,6 +70,7 @@
 		D276552922E4474300CECC0C /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		D276552B22E4477900CECC0C /* UsersDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersDataSource.swift; sourceTree = "<group>"; };
 		D276552D22E44ADB00CECC0C /* UserDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailViewController.swift; sourceTree = "<group>"; };
+		D296AB7122E47621009FA665 /* NavigationTitleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationTitleView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -243,6 +245,7 @@
 			children = (
 				D276551D22E4112A00CECC0C /* AgreementTableViewCell.swift */,
 				D276552322E431AB00CECC0C /* TextViewCell.swift */,
+				D296AB7122E47621009FA665 /* NavigationTitleView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -377,6 +380,7 @@
 				D276550D22E3BC1100CECC0C /* String+Main.swift in Sources */,
 				D276551B22E3E2E200CECC0C /* UIViewController+Storyboard.swift in Sources */,
 				D201102F22E3747200BDF3D3 /* AppDelegate.swift in Sources */,
+				D296AB7222E47621009FA665 /* NavigationTitleView.swift in Sources */,
 				D276551922E3DC4500CECC0C /* UIStoryboard.swift in Sources */,
 				D2423F8922E3AF8E009D0753 /* UIColor+Methods.swift in Sources */,
 				D276550A22E3B61500CECC0C /* ModuleTransitionable.swift in Sources */,

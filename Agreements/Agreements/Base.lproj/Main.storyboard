@@ -22,7 +22,7 @@
                                 <rect key="frame" x="20" y="782" width="374" height="60"/>
                                 <color key="backgroundColor" red="0.96862745100000003" green="0.97254901959999995" blue="0.97647058819999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="40"/>
-                                <state key="normal" title="Log In">
+                                <state key="normal" title="Личный кабинет">
                                     <color key="titleColor" red="0.154070437" green="0.38525363800000001" blue="0.67586851120000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <userDefinedRuntimeAttributes>
@@ -42,7 +42,7 @@
                                         </constraints>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="image" keyPath="image" value="agreements"/>
-                                            <userDefinedRuntimeAttribute type="string" keyPath="text" value="Agreements"/>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="text" value="Соглашения"/>
                                         </userDefinedRuntimeAttributes>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XUF-jl-u73" customClass="ImageButton" customModule="Agreements" customModuleProvider="target">
@@ -53,7 +53,7 @@
                                         </constraints>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="image" keyPath="image" value="users"/>
-                                            <userDefinedRuntimeAttribute type="string" keyPath="text" value="Users"/>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="text" value="Пользователи"/>
                                         </userDefinedRuntimeAttributes>
                                     </view>
                                 </subviews>

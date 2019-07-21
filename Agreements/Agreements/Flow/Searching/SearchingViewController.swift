@@ -64,7 +64,7 @@ class SearchingViewController: UIViewController {
     }
     
     func configureNavigationBar() {
-        let segmentControl = UISegmentedControl(items: ["Поиск соглашений", "Поиск пользователей"])
+        let segmentControl = UISegmentedControl(items: ["Соглашения", "Пользователи"])
         segmentControl.selectedSegmentIndex = mode == .agreement ? 0 : 1
         segmentControl.tintColor = UIColor.Main.blueBackround
         segmentControl.addTarget(self, action: #selector(togleSearchMode(sender:)), for: .valueChanged)

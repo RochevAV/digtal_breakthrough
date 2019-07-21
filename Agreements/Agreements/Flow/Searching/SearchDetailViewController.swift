@@ -30,6 +30,11 @@ class SearchDetailViewController: UIViewController {
         configureTableView()
     }
     
+    private func configureNavigationController() {
+        
+//        navigationItem.titleView = segmentControl
+    }
+    
     private func configureTableView() {
         tableView.estimatedRowHeight = 200
         tableView.rowHeight = UITableView.automaticDimension
