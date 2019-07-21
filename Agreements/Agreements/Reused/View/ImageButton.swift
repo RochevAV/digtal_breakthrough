@@ -47,17 +47,28 @@ class ImageButton: UIControl  {
     
     private func configure() {
         layer.cornerRadius = 20
-        let labelHeight = bounds.height / 4.0
-        let labelFrame = CGRect(x: 0, y: bounds.height - labelHeight, width: bounds.width, height: labelHeight)
-        let label = UILabel(frame: labelFrame)
+        let label = UILabel()
         label.textAlignment = .center
         label.font = UIFont.boldSystemFont(ofSize: 30)
         label.textColor = UIColor.Main.blueBackround
-        self.label = label
+        label.translatesAutoresizingMaskIntoConstraints = false
         addSubview(label)
-        let imageFrame = CGRect(x: labelHeight / 2.0, y: 0, width: bounds.width - labelHeight, height: bounds.height - labelHeight)
-        let imageView = UIImageView(frame: imageFrame)
+        NSLayoutConstraint.activate([
+            label.leadingAnchor.constraint(equalTo: leadingAnchor),
+            label.trailingAnchor.constraint(equalTo: trailingAnchor),
+            label.bottomAnchor.constraint(equalTo: bottomAnchor),
+            label.heightAnchor.constraint(equalToConstant: bounds.width / 4.0)
+            ])
+        self.label = label
+        let imageView = UIImageView()
+        imageView.translatesAutoresizingMaskIntoConstraints = false
         addSubview(imageView)
+        NSLayoutConstraint.activate([
+            imageView.topAnchor.constraint(equalTo: topAnchor, constant: 10),
+            imageView.widthAnchor.constraint(equalTo: imageView.heightAnchor),
+            imageView.bottomAnchor.constraint(equalTo: label.topAnchor),
+            imageView.centerXAnchor.constraint(equalTo: centerXAnchor)
+            ])
         self.imageView = imageView
     }
 }
