@@ -9,13 +9,6 @@
 import UIKit
 
 class ColoredIndicator: UIView {
-
-    enum Status {
-        case clear
-        case inWork
-        case done
-        case warning
-    }
     
     // Private Type
     
@@ -25,7 +18,7 @@ class ColoredIndicator: UIView {
     
     // MARK: - Public Properties
     
-    var status: Status = .clear {
+    var status: Agreement.Status = .clear {
         didSet {
             updateColor(for: status)
         }
@@ -51,7 +44,7 @@ class ColoredIndicator: UIView {
         layer.cornerRadius = bounds.height / 2.0
     }
 
-    private func updateColor(for status: Status) {
+    private func updateColor(for status: Agreement.Status) {
         switch status {
         case .clear:
             backgroundColor = .clear

@@ -162,6 +162,31 @@
                                             <outlet property="textView" destination="aLw-fg-G0r" id="aIM-w9-YLh"/>
                                         </connections>
                                     </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="StatusViewCell" id="fzV-Um-Aci">
+                                        <rect key="frame" x="0.0" y="195" width="414" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="fzV-Um-Aci" id="uQR-lc-85U" customClass="StatusTableViewCell" customModule="Agreements" customModuleProvider="target">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RBG-dx-P4n">
+                                                    <rect key="frame" x="192" y="7" width="30" height="30"/>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="30" id="D0A-dt-eMH"/>
+                                                        <constraint firstAttribute="height" constant="30" id="FjT-LY-hDH"/>
+                                                    </constraints>
+                                                </view>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="RBG-dx-P4n" firstAttribute="centerX" secondItem="uQR-lc-85U" secondAttribute="centerX" id="03G-0z-mJk"/>
+                                                <constraint firstItem="RBG-dx-P4n" firstAttribute="centerY" secondItem="uQR-lc-85U" secondAttribute="centerY" id="DRq-XF-4cU"/>
+                                            </constraints>
+                                            <connections>
+                                                <outlet property="indicator" destination="03G-0z-mJk" id="cAR-NV-9zF"/>
+                                            </connections>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
                                 </prototypes>
                                 <connections>
                                     <outlet property="dataSource" destination="VqS-H6-oVY" id="fls-zN-t1B"/>

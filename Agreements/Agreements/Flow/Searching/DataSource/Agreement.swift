@@ -9,9 +9,17 @@
 import Foundation
 
 struct Agreement {
+    
+    enum Status {
+        case clear
+        case inWork
+        case done
+        case warning
+    }
+    
     let description: String
     let subtext: String
-    let status: ColoredIndicator.Status
+    let status: Status
     let agreements: [Agreement]
     let beginDate: String
     let endDate: String

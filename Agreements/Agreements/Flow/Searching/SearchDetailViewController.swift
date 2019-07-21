@@ -11,6 +11,10 @@ import UIKit
 
 class SearchDetailViewController: UIViewController {
 
+    private enum Constants {
+        static let numberFields = 3
+    }
+    
     // MARK: - Internal Properties
     
     var agreement: Agreement? {
@@ -24,15 +28,17 @@ class SearchDetailViewController: UIViewController {
     // MARK: - Private Properties
     
     @IBOutlet private weak var tableView: UITableView!
+    private var titleView: UIView?
+    
+    // MARK: - Lifecycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
         configureTableView()
+        configureNavigationController()
     }
     
     private func configureNavigationController() {
-        
-//        navigationItem.titleView = segmentControl
     }
     
     private func configureTableView() {
@@ -43,26 +49,63 @@ class SearchDetailViewController: UIViewController {
 }
 
 extension SearchDetailViewController: UITableViewDataSource {
+    
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 3
+    }
+    
+    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        switch section {
+        case 0:
+            return "Статус"
+        case 1:
+            return "Параметры"
+        default:
+            return "Критерии"
+        }
+    }
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 4
+        switch section {
+        case 0:
+            return 1
+        case 1:
+            return Constants.numberFields
+        default:
+            return agreement?.agreements.count ?? 0
+        }
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let row = indexPath.row
-        if row == 0 {
-            let cell = tableView.dequeueReusableCell(withIdentifier: String.Main.Cell.textViewCell, for: indexPath)
-            if let cell = cell as? TextViewCell {
-                cell.agreement = agreement?.description
+        
+        if indexPath.section == 0 {
+            let cell = tableView.dequeueReusableCell(withIdentifier: String.Main.Cell.statusViewCell, for: indexPath)
+            if let cell = cell as? StatusTableViewCell {
+                cell.status = agreement?.status ?? .clear
+            }
+            return cell
+        } else
+        if indexPath.section == 1 {
+            if row == 0 {
+                let cell = tableView.dequeueReusableCell(withIdentifier: String.Main.Cell.textViewCell, for: indexPath)
+                if let cell = cell as? TextViewCell {
+                    cell.agreement = agreement?.description
+                }
+                return cell
+            }
+            let cell = UITableViewCell(style: .subtitle, reuseIdentifier: "Cell")
+            if row == 1 {
+                cell.textLabel?.text = String(format: "%@ - %@", agreement?.beginDate ?? "", agreement?.endDate ?? "")
+                cell.detailTextLabel?.text = "Предварительные данные"
+            } else if row == 2 {
+                cell.textLabel?.text = String(format: "%@ - %@", agreement?.beginDate ?? "", agreement?.endDate ?? "")
+                cell.detailTextLabel?.text = "Фактическая дата подписи"
             }
             return cell
         }
         let cell = UITableViewCell()
-        if row == 1 {
-            cell.textLabel?.text = String(format: "Плановые даты: %@ - %@", agreement?.beginDate ?? "", agreement?.endDate ?? "")
-        } else if row == 2 {
-            cell.textLabel?.text = String(format: "Фактическая дата подписи: %@ - %@", agreement?.beginDate ?? "", agreement?.endDate ?? "")
-        }
-        
+        cell.textLabel?.text = agreement?.agreements[indexPath.row].description ?? ""
         return cell
     }
     

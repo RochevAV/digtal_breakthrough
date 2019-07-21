@@ -76,4 +76,9 @@ extension String.Main.Cell {
     static var textViewCell: String {
         return "TextViewCell"
     }
+    
+    static var statusViewCell: String {
+        return "StatusViewCell"
+    }
+
 }

@@ -34,6 +34,7 @@
 		D276552C22E4477900CECC0C /* UsersDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = D276552B22E4477900CECC0C /* UsersDataSource.swift */; };
 		D276552E22E44ADB00CECC0C /* UserDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D276552D22E44ADB00CECC0C /* UserDetailViewController.swift */; };
 		D296AB7222E47621009FA665 /* NavigationTitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D296AB7122E47621009FA665 /* NavigationTitleView.swift */; };
+		D296AB7422E4852D009FA665 /* StatusTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D296AB7322E4852D009FA665 /* StatusTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -71,6 +72,7 @@
 		D276552B22E4477900CECC0C /* UsersDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersDataSource.swift; sourceTree = "<group>"; };
 		D276552D22E44ADB00CECC0C /* UserDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailViewController.swift; sourceTree = "<group>"; };
 		D296AB7122E47621009FA665 /* NavigationTitleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationTitleView.swift; sourceTree = "<group>"; };
+		D296AB7322E4852D009FA665 /* StatusTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -246,6 +248,7 @@
 				D276551D22E4112A00CECC0C /* AgreementTableViewCell.swift */,
 				D276552322E431AB00CECC0C /* TextViewCell.swift */,
 				D296AB7122E47621009FA665 /* NavigationTitleView.swift */,
+				D296AB7322E4852D009FA665 /* StatusTableViewCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -389,6 +392,7 @@
 				D276552022E411FE00CECC0C /* ColoredIndicator.swift in Sources */,
 				D2423F9022E3B226009D0753 /* MainRouter.swift in Sources */,
 				D276552C22E4477900CECC0C /* UsersDataSource.swift in Sources */,
+				D296AB7422E4852D009FA665 /* StatusTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
