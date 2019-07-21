@@ -1,0 +1,4 @@
+<div class="input-group">
+<span class="input-group-addon">Статус</span>
+<SELECT name="move" size="1" class="form-control"><option value="0">В разработке</option><option value="1">Планируется к подписанию</option><option value="1">Выполняется</option><option value="1">Отклонено</option></SELECT>
+</div>

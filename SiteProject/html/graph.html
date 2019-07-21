@@ -1,0 +1,55 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="initial-scale=1">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <title>Взаимосвязи соглашений</title>
+<link rel="stylesheet" href="bootstrap.min.css">
+<link rel="stylesheet" href="jquery-ui.min.css" type="text/css"/>
+</head>
+<body>
+
+<div class="row">
+<div class="col-sm-3"></div>
+
+<div class="col-sm-8">
+
+<h1>Взаимосвязи соглашений</h1>
+<h2>Исходный вариант</h2>
+<svg class="well save" version="1.1" xmlns:svg="http://www.w3.org/2000/svg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="550" height="350" style="background-color: aliceblue;">
+<defs>
+<symbol id="p" width="100" height="100" viewBox="0 0 100 100">
+	<polygon id="set-p" points="1,99 50,1 99,99"></polygon>
+</symbol>
+<symbol id="s" width="100" height="100" viewBox="0 0 100 100">
+<circle id="set-s" cx="50" cy="50" r="45"></circle>
+<path id="set-s1" d="M18.1,18.1 81.81,81.81"></path><path id="set-s2" d="M18.1,81.82 81.82,18.1"></path>
+</symbol>
+<marker id="endTriangle" markerWidth="10" markerHeight="20" markerUnits="userSpaceOnUse" refX="10" refY="10" orient="auto">
+	<path d="M 0 0 10 10 0 20 Z" style="fill: #f00;"></path>
+</marker>
+</defs>	
+<g id="conectline"><path d="M70,74,71,178" data-n="0" stroke="#000000" stroke-width="1" class="new" fill="none" style="cursor:pointer;marker-end:url(#endTriangle)" data-drawfrom="0" data-drawto="2"></path><path d="M236,76,235,176" data-n="1" stroke="#000000" stroke-width="1" class="new" fill="none" style="cursor:pointer;marker-end:url(#endTriangle)" data-drawfrom="1" data-drawto="3"></path><path d="M234,226 234,227 121,227" data-n="2" stroke="#000000" stroke-width="1" class="new" fill="none" style="cursor:pointer;marker-end:url(#endTriangle)" data-drawfrom="3" data-drawto="2"></path></g>
+<g id="shape"><rect x="20" y="24" id="n0" name="rect" width="100" height="100" fill="#ffffff" stroke="#000000" stroke-width="1" style="cursor: pointer" class="work" data-fill="#ffffff" data-select="" data-n="0"></rect><rect x="186" y="26" id="n1" name="rect" width="100" height="100" fill="#ffffff" stroke="#000000" stroke-width="1" style="cursor: pointer" class="work" data-fill="#ffffff" data-select="" data-n="0"></rect><rect x="21" y="178" id="n2" name="rect" width="100" height="100" fill="#ffffff" stroke="#000000" stroke-width="1" style="cursor: pointer" class="work" data-fill="#ffffff" data-select="" data-n="0"></rect><rect x="184" y="176" id="n3" name="rect" width="100" height="100" fill="#ffffff" stroke="#000000" stroke-width="1" style="cursor: pointer" class="work" data-fill="#ffffff" data-select="" data-n="0"></rect></g>
+<g id="textnum"><text id="tn0" x="70" y="74" class="draggable" font-size="14" fill="#000000" transform="matrix(1 0 0 1 0 0)">C1</text><text id="tn1" x="236" y="76" class="draggable" font-size="14" fill="#000000" transform="matrix(1 0 0 1 0 0)">C3</text><text id="tn2" x="71" y="228" class="draggable" font-size="14" fill="#000000" transform="matrix(1 0 0 1 0 0)">C2</text><text id="tn3" x="234" y="226" class="draggable" font-size="14" fill="#000000" transform="matrix(1 0 0 1 0 0)">C5</text></g>
+<g id="valconect"><text id="t0" class="draggable" font-size="14" fill="#000000" x="71" y="141" transform="matrix(1 0 0 1 6 9)">2 дн</text><text id="t1" class="draggable" font-size="14" fill="#000000" x="235" y="141" transform="matrix(1 0 0 1 4 6)">4 дн</text><text id="t2" class="draggable" font-size="14" fill="#000000" x="153" y="217" transform="matrix(1 0 0 1 -13 1)">1 дн</text></g>
+</svg>
+
+<p><button id="addtag" class="btn btn-lg btn-success" type="button" onclick="AddSvg();">Проверить на оптимальность</button>
+
+<h2>Оптимальный вариант</h2>
+<svg class="well save" id="svg" version="1.1" xmlns:svg="http://www.w3.org/2000/svg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="550" height="350" style="background-color: aliceblue;"></svg>
+
+</div>
+
+<div class="col-sm-3"></div>
+
+</div>
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js" defer></script>
+<script src="bootstrap.min.js" defer></script>
+<script src="jquery-ui.min.js" defer></script>
+<script src="dgr.js" defer></script>
+</body>
+</html>

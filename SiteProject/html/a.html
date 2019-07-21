@@ -1,0 +1,133 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="initial-scale=1">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <title>Добавить соглашение</title>
+<link rel="stylesheet" href="bootstrap.min.css">
+<link rel="stylesheet" href="jquery-ui.min.css" type="text/css"/>
+</head>
+<body>
+
+<div class="row">
+<div id="idleft" class="col-sm-3"></div>
+
+<div id="idleft" class="col-sm-8">
+
+<h1>Параметры соглашения</h1>
+
+<div class="input-group">
+<span class="input-group-addon">Основание</span>
+<input type="text" class="form-control" name="date2" value="">
+<span class="input-group-btn"><a id="fadd15" role="button" href="#" class="btn btn-success" onclick="clkAddXO(event);">Выбрать</a></span>
+</div>
+
+<div class="input-group">
+<span class="input-group-addon">Название</span>
+<input type="text" class="form-control" id="date2" name="date2" value="">
+<span class="input-group-addon">Дата соглашения</span>
+<input type="text" class="datepicker form-control hasDatepicker" id="date1" name="date1" value="29.08.2019">
+</div>
+
+<div class="input-group">
+<span class="input-group-addon">Предмет соглашения</span>
+<input type="text" class="form-control" id="date2" name="date2" value="">
+</div>
+
+<div class="input-group">
+<span class="input-group-addon">Плановая дата подписания</span>
+<input type="text" class="datepicker form-control hasDatepicker" id="date1" name="date1" value="29.08.2019">
+<span class="input-group-addon">Фактическая дата подписания</span>
+<input type="text" class="datepicker form-control hasDatepicker" id="date2" name="date2" value="29.08.2019">
+</div>
+
+<div class="input-group">
+<span class="input-group-addon">Плановая дата конца действия</span>
+<input type="text" class="datepicker form-control hasDatepicker" id="date1" name="date1" value="29.08.2019">
+<span class="input-group-addon">Фактическая дата конца действия</span>
+<input type="text" class="datepicker form-control hasDatepicker" id="date2" name="date2" value="29.08.2019">
+</div>
+<p></p>
+
+<h2>Исполнители</h2>
+<div id="tag" class="well">
+<button id="addtag" class="btn btn-success" type="button" onclick="AddTag();">Добавить сторону соглашения</button>
+  <div class="input-group">
+  <SELECT name="move" size="1" class="form-control"><option value="0">Сторона 1</option><option value="1">Сторона 2</option><option value="1">Сторона 3</option></SELECT>
+  <span class="input-group-addon">Роль</span>
+  <SELECT name="move" size="1" class="form-control"><option value="0">Куратор</option><option value="1">Представитель</option><option value="1">Ответственный</option></SELECT>
+  <span class="input-group-addon">ФИО</span>
+  <input type="text" class="form-control" id="date1" name="date1" placeholder="Алексеев Иван Сергеевич" value="">
+  </div>
+</div>
+
+<h2>Критерии</h2>
+<table id="listkrit" class="table table-bordered">
+  <tbody id="tbkrit">
+    <tr><td>Бюджет</td><td><input type="text" class="form-control" name="date1" value="0"></td><td>Срок</td><td><input type="text" class="datepicker form-control hasDatepicker" id="date1" name="date1" value="29.08.2019"></td><td><button class="btn btn-info" type="button" data-target="#myModalAdd" data-toggle="modal">Другие параметры</button></td></tr>
+  </tbody>
+</table>
+
+<h2>Приложения</h2>
+<input class="btn btn-primary" id="fileupload" type="file" name="files[]" data-url="/fileload.php">
+<div class="input-group">
+<span class="input-group-addon">Оператор: Мураев П.Р.</span>
+</div>
+
+<h2>Поручения</h2>
+<div id="tag" class="well">
+<button id="addact" class="btn btn-success" type="button" onclick="AddAct();">Добавить поручение</button>
+  <div class="input-group">
+  <span class="input-group-addon">Исполнитель</span><input type="text" class="form-control" name="date1" value="">
+  <span class="input-group-addon">Срок</span><input type="text" class="form-control" name="date1" value="23.10.2019">
+  </div>
+</div>
+
+<a role="button" href="index.html" class="btn btn-lg btn-primary">Сохранить</a>
+
+</div>
+
+<div class="col-sm-3"></div>
+
+</div>
+
+<div id="myModalAdd" class="modal fade">
+<div class="modal-dialog modal-xs"><div class="modal-content"><div class="modal-header"><button type="button" class="close" data-dismiss="modal" aria-hidden="true"> &otimes; </button><h4 class="modal-title">Карточка критерия</h4></div>
+<div class="modal-body">
+<button id="addparam" class="btn btn-success" type="button" onclick="AddParam();">Добавить критерий</button>
+
+<div id="listparam">
+<div class="input-group">
+<input type="text" class="form-control" id="date1" name="date1" value="" placeholder="Например, наличие инфраструктуры">
+<span class="input-group-addon"><input class="form-control" type="checkbox" name="f32" value="1"></span>
+<span class="input-group-addon">Обязательность</span>
+</div>
+</div>
+
+</div>
+<div class="modal-footer"><button type="button" class="btn btn-primary" data-dismiss="modal">Сохранить</button><button type="button" class="btn btn-default" data-dismiss="modal">Отмена</button></div></div></div>
+</div>
+
+<div id="myModalList" class="modal fade">
+<div class="modal-dialog modal-xs"><div class="modal-content"><div class="modal-header"><button type="button" class="close" data-dismiss="modal" aria-hidden="true"> &otimes; </button><h4 class="modal-title">Карточка критерия</h4></div>
+<div class="modal-body">
+
+<table class="table table-bordered">
+<tr><td></td><td></td><td>Сторона 2</td><td>Сторона 3</td></tr>
+<tr><td><button id="addtag" class="btn btn-success" type="button" onclick="AddCrit();">Добавить соглашение</button></td><td>Сторона 1</td><td><span class="input-mobil"><input type="checkbox" name="f32" value="1"></span> Да</td><td><span class="input-mobill"><input type="checkbox" name="f32" value="1"></span> Да</td></tr>
+<tr><td>Наличие водопровода</td><td>Сторона 1</td><td><span class="input-mobil"><input type="checkbox" name="f32" value="1"></span> Да</td><td><span class="input-mobil"><input type="checkbox" name="f32" value="1"></span>Да</td></tr>
+<tr><td>Инфраструктура</td><td>Сторона 2</td><td><span class="input-mobil"><input type="checkbox" name="f32" value="1"></span> Да</td><td><span class="input-mobil"><input type="checkbox" name="f32" value="1"></span>Да</td></tr>
+<tr><td>Бюджет не менее</td><td>Сторона 2</td><td><span class="input-mobil"><input type="checkbox" name="f32" value="1"></span> Да</td><td><span class="input-mobil"><input type="checkbox" name="f32" value="1"></span>Да</td></tr>
+</table>
+</div>
+
+</div>
+<div class="modal-footer"><input id="ModalList" type="submit" class="btn btn-primary" value="Сохранить" data-passiv=""><button type="button" class="btn btn-default" data-dismiss="modal">Отмена</button></div></div></div>
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js" defer></script>
+<script src="bootstrap.min.js" defer></script>
+<script src="jquery-ui.min.js" defer></script>
+<script src="app.js" defer></script>
+</body>
+</html>
